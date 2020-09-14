@@ -1,45 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Hero Squad!</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="app.css">
-</head>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<title>Hero Squad!</title>-->
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+<!--<link rel="stylesheet" type="text/css" href="app.css">-->
+<!--</head>-->
 
-<body>
-<div class="">
-    <nav id="navbar" class="">
-        <div class="nav-wrapper">
+<!--<body>-->
+<!--<div class="">-->
+<!--    <nav id="navbar" class="">-->
+<!--        <div class="nav-wrapper">-->
 
-            <ul id="menu">
-                <li><a href="/">Home</a></li><!--
-                --><li><a href="/squadform">Generate A Squad</a></li>
-                --><li><a href="/heroform">Generae A Hero</a></li><!--
-                  --><li><a href="#contact">Contact</a></li>
+<!--            <ul id="menu">-->
+<!--                <li><a href="/">Home</a></li>&lt;!&ndash;-->
+<!--                &ndash;&gt;<li><a href="/squadform">Generate A Squad</a></li>-->
+<!--                &ndash;&gt;<li><a href="/heroform">Generae A Hero</a></li>&lt;!&ndash;-->
+<!--                  &ndash;&gt;<li><a href="#contact">Contact</a></li>-->
 
-               </ul>
-             </div>
-          </nav>
+<!--               </ul>-->
+<!--             </div>-->
+<!--          </nav>-->
 
-    <div class="menuIcon">
-        <span class="icon icon-bars"></span>
-        <span class="icon icon-bars overlay"></span>
+<!--    <div class="menuIcon">-->
+<!--        <span class="icon icon-bars"></span>-->
+<!--        <span class="icon icon-bars overlay"></span>-->
+<!--    </div>-->
+
+<!--    <div class="overlay-menu">-->
+<!--        <ul id="menu">-->
+<!--            <li><a href="#home">Home</a></li>-->
+<!--            <li><a href="#about">About</a></li>-->
+<!--            <li><a href="#services">Services</a></li>-->
+<!--            <li><a href="#contacts">Contacts</a></li>-->
+<!--        </ul>-->
+
+<!--    </div>-->
+
+<!--    #parse( $template )-->
+
+
+<!--</div>-->
+<!--</body>-->
+
+<!--</html>-->
+
+
+{{#block "header"}}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>{{#block "title"}}Hero Squad{{/block}}</title>
+        <link href="https://fonts.googleapis.com/css?family=Acme|Bangers|Poppins:500&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel='stylesheet' href='/app.css'>
+    </head>
+    <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img id="navLogo" src="https://www.freepnglogos.com/uploads/batman-begins-logo-png-20.png" height="30px"
+                 alt="logo"/>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {{#block "navbar"}}
+                    {{/block}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+{{/block}}
+<!--begin main template-->
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Hero Squads</h1>
+        <h5 class="text-center">The Superhero Registry</h5>
     </div>
-
-    <div class="overlay-menu">
-        <ul id="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-        </ul>
-
+    <div>
+        {{#block "content"}}
+        {{/block}}
     </div>
-
-    #parse( $template )
-
 
 </div>
-</body>
+<!--end main template-->
+{{#block "footer"}}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+{{/block}}
 
-</html>
