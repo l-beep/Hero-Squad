@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}hero{{/block}}</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href='/app.css'>
+</head>
+<body>
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Welcome</h1>
+        <p>To My Hero Squad</p>
+        <p>Webpage</p>
+    </div>
+</div>
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="/detail">View All Heroes</a></li>
+    <li role="presentation"><a href="/add">Generate a New Hero</a></li>
+</ul>
+
+
+    {{#block "content"}}
+    {{/block}}
+
+</div>
+<!--end main template-->
+{{#block "footer"}}
+    <footer class="page-footer ">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright| Lovine Oduor:
+            <a href="https://hero.com/">Hero Squad</a>
+        </div>
+    </footer>
+    </body>
+    </html>
+{{/block}}

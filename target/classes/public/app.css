@@ -1,0 +1,17 @@
+body{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:10px;
+    background-color:green;
+    text-align: center;
+    background-image: linear-gradient(rgba( 0, 0, 0, 0.781), rgba(0, 0, 0, 0.788)), url("https://cdn.pixabay.com/photo/2016/12/05/21/55/super-woman-1885016__340.jpg");
+    background-image:100%
+    background-repeat:repeat;
+    color :white;
+}
+img{
+   height:800px;
+}
+
+.col 3 {
+}

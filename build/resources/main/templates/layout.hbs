@@ -1,95 +1,37 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--<title>Hero Squad!</title>-->
-<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
-<!--<link rel="stylesheet" type="text/css" href="app.css">-->
-<!--</head>-->
-
-<!--<body>-->
-<!--<div class="">-->
-<!--    <nav id="navbar" class="">-->
-<!--        <div class="nav-wrapper">-->
-
-<!--            <ul id="menu">-->
-<!--                <li><a href="/">Home</a></li>&lt;!&ndash;-->
-<!--                &ndash;&gt;<li><a href="/squadform">Generate A Squad</a></li>-->
-<!--                &ndash;&gt;<li><a href="/heroform">Generae A Hero</a></li>&lt;!&ndash;-->
-<!--                  &ndash;&gt;<li><a href="#contact">Contact</a></li>-->
-
-<!--               </ul>-->
-<!--             </div>-->
-<!--          </nav>-->
-
-<!--    <div class="menuIcon">-->
-<!--        <span class="icon icon-bars"></span>-->
-<!--        <span class="icon icon-bars overlay"></span>-->
-<!--    </div>-->
-
-<!--    <div class="overlay-menu">-->
-<!--        <ul id="menu">-->
-<!--            <li><a href="#home">Home</a></li>-->
-<!--            <li><a href="#about">About</a></li>-->
-<!--            <li><a href="#services">Services</a></li>-->
-<!--            <li><a href="#contacts">Contacts</a></li>-->
-<!--        </ul>-->
-
-<!--    </div>-->
-
-<!--    #parse( $template )-->
-
-
-<!--</div>-->
-<!--</body>-->
-
-<!--</html>-->
-
-
-{{#block "header"}}
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>{{#block "title"}}Hero Squad{{/block}}</title>
-        <link href="https://fonts.googleapis.com/css?family=Acme|Bangers|Poppins:500&display=swap" rel="stylesheet">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-        <link rel='stylesheet' href='/app.css'>
-    </head>
-    <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <img id="navLogo" src="https://www.freepnglogos.com/uploads/batman-begins-logo-png-20.png" height="30px"
-                 alt="logo"/>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    {{#block "navbar"}}
-                    {{/block}}
-                </ul>
-            </div>
-        </div>
-    </nav>
-{{/block}}
-<!--begin main template-->
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="text-center">Hero Squads</h1>
-        <h5 class="text-center">The Superhero Registry</h5>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}hero{{/block}}</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href='/app.css'>
+</head>
+<body>
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Welcome</h1>
+        <p>To My Hero Squad</p>
+        <p>Webpage</p>
     </div>
-    <div>
-        {{#block "content"}}
-        {{/block}}
-    </div>
+</div>
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="/detail">View All Heroes</a></li>
+    <li role="presentation"><a href="/add">Generate a New Hero</a></li>
+</ul>
+
+
+    {{#block "content"}}
+    {{/block}}
 
 </div>
 <!--end main template-->
 {{#block "footer"}}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <footer class="page-footer ">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright| Lovine Oduor:
+            <a href="https://hero.com/">Hero Squad</a>
+        </div>
+    </footer>
     </body>
     </html>
 {{/block}}
-
